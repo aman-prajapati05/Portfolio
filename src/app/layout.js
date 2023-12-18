@@ -1,7 +1,12 @@
-import { Inter } from 'next/font/google'
+import { Inter, Oswald} from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const oswald = Oswald
+({ 
+  subsets: ['latin'], 
+  variable: "--font-oswald",
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,10 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        < meta charset="UTF-8"/>
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={[inter.className, oswald.className]}>{children}</body>
     </html>
   )
 }
