@@ -8,6 +8,10 @@
 
 
 
+body{
+    cursor: wait;
+}
+
 .mons{
     font-family: 'Montserrat';
     font-style: normal;
