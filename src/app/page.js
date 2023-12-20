@@ -6,6 +6,8 @@ import { Landing } from './components/Landing'
 import { Navbar2 } from './components/Navbar2'
 import { Preloader } from './components/Preloader/Preloader'
 import { AnimatePresence } from 'framer-motion';
+import { Project1 } from './components/Project/Project1';
+import { Project } from './components/Project/Project';
 
 export default function Home() {
 
@@ -25,8 +27,9 @@ export default function Home() {
    {loading && <Preloader/>}
    </AnimatePresence>
     
-   {/* <Navbar2/>
-   <Landing/> */}
+   {/* {/* <Navbar2/> */}
+   {/* <Landing/>  */}
+   <Project/>
    <Footer/>
    </>
   )
