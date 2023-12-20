@@ -4,7 +4,8 @@ import { useState,useEffect } from 'react';
 import { Footer } from './components/Footer'
 import { Landing } from './components/Landing'
 import { Navbar2 } from './components/Navbar2'
-import { Preloader } from './components/Preloader'
+import { Preloader } from './components/Preloader/Preloader'
+import { AnimatePresence } from 'framer-motion';
 
 export default function Home() {
 
@@ -20,7 +21,10 @@ export default function Home() {
 
   return (
    <>
-    {loading === true ? <Preloader/> : null}
+   <AnimatePresence>
+   {loading && <Preloader/>}
+   </AnimatePresence>
+    
    {/* <Navbar2/>
    <Landing/> */}
    <Footer/>
