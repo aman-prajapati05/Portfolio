@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import { PPmori } from '../../../public/fonts/fonts';
 
 export function Navbar2() {
 
@@ -9,10 +10,10 @@ export function Navbar2() {
 
     const handleClick = () => {
         setChildClasses((prevClasses) =>
-            prevClasses === 'bg-[#929598] w-[38px] h-[2px] transition-all' ? 'bg-[#929598] w-[38px] h-[2px] transition-all line1' : 'bg-[#929598] w-[38px] h-[2px] transition-all'
+            prevClasses === 'bg-[#929598] w-[38px] h-[2px] transition-all' ? 'bg-[#929598] w-[38px] h-[2px] transition-all line1 sticky top-5' : 'bg-[#929598] w-[38px] h-[2px] transition-all'
         );
         setChildClasses2((prevClasses) =>
-            prevClasses === 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all' ? 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all line2' : 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all'
+            prevClasses === 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all' ? 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all line2 sticky top-5' : 'bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all'
         );
         setShowPage((prevState)=>prevState==false?true:false); // Show the page when the icon is clicked
         console.log('I am clicked');
@@ -21,7 +22,7 @@ export function Navbar2() {
     return (
         <>
          <div className=' cursor-pointer mx-1 mt-[6px] icon ' onClick={handleClick}>
-                                <div className={`bg-[#929598] w-[38px] h-[2px] transition-all ${childClasses}`}></div>
+                                <div className={`bg-[#929598] w-[38px] h-[2px] transition-all ${childClasses} ${PPmori.className}`}></div>
                                 <div className={`bg-[#929598] w-[38px] h-[2px] mt-[4px] transition-all ${childClasses2}`}></div>
                             </div>
             {showPage && ( 

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import {motion} from "framer-motion";
 import {slideUp,opacity} from "./anim"
-
+import './../../globals.css'
 
 export function Preloader (){ 
     
@@ -54,18 +54,14 @@ export function Preloader (){
         variants={slideUp}
         initial="initial"
         exit="exit"
-         className="w-screen h-screen bg-black text-white flex justify-center items-center top-0 left-0">
+         className=" h-screen bg-black text-white flex justify-center items-center preloader">
             <motion.div
             variants={opacity}
             initial="initial"
             animate="enter"
              className="text-4xl font-bold">
                 {words[index]}
-                <svg>
-
-                    <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
-
-                </svg>
+                
                 </motion.div>
         </motion.div>
         </>

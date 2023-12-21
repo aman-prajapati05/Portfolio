@@ -8,6 +8,8 @@ import { Preloader } from './components/Preloader/Preloader'
 import { AnimatePresence } from 'framer-motion';
 import { Project1 } from './components/Project/Project1';
 import { Project } from './components/Project/Project';
+import { Navbar } from './components/Navbar';
+import { Selected } from './components/selected';
 
 export default function Home() {
 
@@ -23,14 +25,16 @@ export default function Home() {
 
   return (
    <>
-   <AnimatePresence>
+   {/* <AnimatePresence>
    {loading && <Preloader/>}
-   </AnimatePresence>
+   </AnimatePresence> */}
     
-   {/* {/* <Navbar2/> */}
-   {/* <Landing/>  */}
-   <Project/>
-   <Footer/>
+    {/* <Navbar/> */}
+   {/* <Landing/>   */}
+   <Selected/>
+   {/* <Project/> */}
+   
+   {/* <Footer/> */}
    </>
   )
 }

@@ -10,8 +10,9 @@ export function Project(){
                     <Project1 Data={item}/>
                 )
             })
-
         }
+        
+        
         </>
     )
 }

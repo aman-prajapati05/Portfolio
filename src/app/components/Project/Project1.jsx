@@ -6,7 +6,7 @@ export function Project1({Data}) {
   return (
     <>
       <div
-        className={`w-full h-screen ${Data.color} text-white pt-4 px-10 ${arges.className} overflow-hidden`}
+        className={`w-full h-screen ${Data.color} text-white pt-4 px-10 ${arges.className} overflow-hidden sticky ${Data.className} z-10`}
       >
 
         
@@ -47,6 +47,7 @@ export function Project1({Data}) {
           <div className=" w-[26rem] h-[20rem] bg-white overflow-hidden opacity-5 rounded-xl"></div>
         </div>
       </div>
+      
     </>
   );
 }
