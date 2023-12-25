@@ -10,18 +10,18 @@ export function Project1({Data}) {
       >
 
         
-        <div className="flex justify-between">
-          <div className=" font-black text-3xl">SOME</div>
+        <div className="flex md:justify-between justify-center">
+          <div className=" font-black text-3xl hidden md:block">SOME</div>
           <div className={`flex items-center ${PPmori.className}`}>
             <div>{Data.index}</div>
             <div className="w-[50px] h-[1px] bg-white mx-2"></div>
             <div>05</div>
           </div>
-          <div className="font-black text-3xl">PROJECTS</div>
+          <div className="font-black text-3xl hidden md:block">PROJECTS</div>
         </div>
         
         <div
-          className={`${arges.className} text-[22rem] font-black opacity-20 flex justify-end relative top-36`}
+          className={`${arges.className} text-[22rem] font-black opacity-20 md:flex  hidden justify-end relative top-36`}
         >
          {Data.index}
         </div>
@@ -29,23 +29,40 @@ export function Project1({Data}) {
         
 
         <div
-          className={`flex justify-between relative -top-52 ${arges.className}`}
+          className={`flex md:justify-between md:flex-row flex-col relative md:-top-52 items-center md:items-stretch top-24 gap-8 md:gap-0 ${arges.className}`}
         >
-          <div className="flex flex-col">
+          <div className="flex flex-col order-2 md:order-1">
             <div
-              className={`${PPmori.className} text-sm opacity-90 tracking-wider`}
+              className={`${PPmori.className} text-sm opacity-90 tracking-wider md:order-1 order-2 `}
             >
               {Data.description}
             </div>
-            <div className="text-[22rem] font-black leading-none">{Data.title}</div>
+            <div className="md:text-[22rem] text-9xl font-black leading-none md:order-2 order-1 text-center  ">{Data.title}</div>
           </div>
-          <motion.div 
-          drag
-          className={` ${PPmori.className} w-24 h-24 rounded-full border-2 flex justify-center items-center -mt-9 text-xl hover:scale-125`}>
-            OPEN
-        </motion.div>
-          <div className=" w-[26rem] h-[20rem] bg-white overflow-hidden opacity-5 rounded-xl"></div>
+          
+        <div className={`${PPmori.className} order-5 md:hidden text-2xl tracking-tighter underline-offset-4 underline`}>View Site</div>
+          <div className=" md:w-[26rem] md:h-[20rem] w-[18rem] h-[18rem] bg-white overflow-hidden opacity-5 rounded-xl order-1 md:order-3"></div>
         </div>
+        <motion.div 
+            initial={{ opacity: 0, y: 50 }} // Initial position and opacity
+            animate={{ opacity: 1, y: 0 }} // Animation properties
+            exit={{ opacity: 0, y: 50 }} // Exit animation
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.3 }} // Scale up on hover
+          style={{ left: `${position.x}px`, top: `${position.y}px` }}
+          className={` ${PPmori.className} ${Data.color} cursor-default w-24 h-24 rounded-full border-2 xl:flex justify-center items-center -mt-9 text-xl hover:scale-110 hidden md:order-2 absolute`}>
+            <motion.div
+             initial={{ opacity: 0, y: 50, rotateX: 0 }} // Initial position and opacity
+             animate={{ opacity: 1, y: 0 }} // Animation properties
+             exit={{ opacity: 0, y: -50 }} // Exit animation (move up)
+             whileHover={{ rotateX: 360 }} // Rotate on hover
+             transition={{ duration: 0.5 }} // Animation duration
+            >
+            OPEN
+            </motion.div>
+        </motion.div>
+        <div className={`${PPmori.className}  md:flex justify-center text-3xl underline underline-offset-4 hidden xl:hidden
+        `}>View Site</div>
       </div>
       
     </>
