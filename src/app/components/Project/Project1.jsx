@@ -1,8 +1,40 @@
+"use client"
 import { PPmori, arges } from "../../../../public/fonts/fonts";
 import { motion } from "framer-motion";
 
+import { useState,useEffect } from "react";
+
 
 export function Project1({Data}) {
+
+  const [position, setPosition] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    const borderOffset = 50;
+    const minX = borderOffset;
+    const minY = borderOffset;
+    const maxX = window.innerWidth - borderOffset;
+    const maxY = window.innerHeight - borderOffset;
+    const updateCursorPosition = (event) => {
+      const { clientX: x, clientY: y } = event;
+  
+      if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
+        
+        setTimeout(() => {
+        setPosition({ x:x-50, y });
+        }, 50);
+      } else {
+        setPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+      }
+    };
+  
+    useEffect(() => {
+      document.addEventListener('mousemove', updateCursorPosition);
+  
+      return () => {
+        document.removeEventListener('mousemove', updateCursorPosition);
+      };
+    }, []);
+
+ 
   return (
     <>
       <div
