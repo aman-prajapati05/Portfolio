@@ -20,21 +20,21 @@ export default function Home() {
       setLoading(false)
       document.body.style.cursor = "default";
     }, 2000);
-
+    
   })
 
   return (
    <>
-   {/* <AnimatePresence>
+   <AnimatePresence>
    {loading && <Preloader/>}
-   </AnimatePresence> */}
+   </AnimatePresence>
     
-    {/* <Navbar/> */}
-   {/* <Landing/>   */}
+    <Navbar/>
+   <Landing/>  
    <Selected/>
    {/* <Project/> */}
    
-   {/* <Footer/> */}
+   <Footer/>
    </>
   )
 }

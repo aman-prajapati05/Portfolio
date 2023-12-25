@@ -5,10 +5,10 @@ export function Footer(){
         <>
         <div className="bg-[#252C35] h-screen text-white w-screen absolute z-50 overflow-hidden ">
             <div className="flex p-10 z-100">
-                <div className={`flex justify-between w-full flex-wrap ${PPmori.className}`}>
+                <div className={`flex justify-between w-full flex-wrap ${PPmori.className} gap-7 md:gap-0`}>
                     <div className="flex ">
-                    <div className="text-xs py-1 ">01/</div>
-                    <div className="flex flex-col px-5">
+                    <div className="text-xs py-1 hidden md:block ">01/</div>
+                    <div className="flex flex-col md:px-5">
                         <div className="text-xl ">SITEMAP</div>
                         <div className="flex flex-col mt-5">
                             <div className="pb-3 cursor-pointer text-lg">HOME</div>
@@ -20,8 +20,8 @@ export function Footer(){
                     </div>
                     
                     <div className="flex ">
-                    <div className="text-xs py-1 ">02/</div>
-                    <div className="flex flex-col px-5">
+                    <div className="text-xs py-1 hidden md:block">02/</div>
+                    <div className="flex flex-col md:px-5">
                         <div className="text-xl ">SOCIALS</div>
                         <div className="flex flex-col mt-5">
                             <div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">LINKEDIN</div>
@@ -33,8 +33,8 @@ export function Footer(){
                     </div>
 
                     <div className="flex ">
-                    <div className="text-xs py-1 ">03/</div>
-                    <div className="flex flex-col px-5">
+                    <div className="text-xs py-1 hidden md:block">03/</div>
+                    <div className="flex flex-col md:px-5">
                         <div className="text-xl ">OTHERS</div>
                         <div className="flex flex-col mt-5">
                             <div className="pb-3 text-[#929598] cursor-pointer hover:text-white text-lg">GITHUB</div> 
@@ -49,25 +49,25 @@ export function Footer(){
                 </div>
                 
             </div>
-            <div className=" mt-18 pt-20 mb-0 pb-0">
+            <div className=" mt-18 pt-20 mb-0 pb-0 ">
             <div className="flex justify-between px-10 text-[#929598] text-xs">
-                <div>
-                DIGITAL DESIGNER / WEBFLOW EXPERT
+                <div className='hidden xl:block'>
+                WEB DEVELOPER
                 </div>
-                <div>
+                <div className='hidden xl:block'>
                 PORTFOLIO 2023
                 </div>
             </div>
-            <div className={` flex justify-between px-10 text-[22rem] scale-y-110 mt-4  font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
+            <div className={`md:mt-[15rem] xl:mt-4 flex justify-between px-10 md:text-[22rem] text-9xl scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
                 <div className='p-0 whitespace-nowrap'>AMAN </div>
                 <div className='p-0'> PRAJAPATI</div>
             </div>
-            <div className="flex justify-between px-10 mt-[-60px] mb-0 pb-0 font-light text-xs">
+            <div className="flex justify-between px-10 xl:mt-[-60px] mb-0 pb-0 font-light text-xs">
                 <div>
                     INFOS & CREDITS
                 </div>
                 <div>
-                PORTFOLIO 2023
+                    BACK TO TOP
                 </div>
             </div>
             </div>
