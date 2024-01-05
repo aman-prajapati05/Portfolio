@@ -4,21 +4,24 @@ export const Data = [
         color:"bg-[#252525]",
         title: "LUMI",
         description: "This is a project description",
-        className: "top-0"
+        className: "top-0",
+        img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
     },
    {
         index: '02',
         color:"bg-[#3460C7]",
         title: "PAX",
         description: "This is a project description",
-        className:"top-0"
+        className:"top-0",
+        img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
     },
     {
         index: '03',
         color:"bg-[#473D99]",
         title: "SNAPZ",
         description: "This is a project description",
-        className:"top-0"
+        className:"top-0",
+        img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
        
     },
     {
@@ -26,7 +29,8 @@ export const Data = [
         color:"bg-[#327EF6]",
         title: "NIRMAAN",
         description: "This is a project description",
-        className:"top-0"
+        className:"top-0",
+        img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
         
     },
     {
@@ -34,7 +38,8 @@ export const Data = [
         color:"bg-[#003290]",
         title: "Project 5",
         description: "This is a project description",
-        className:"top-0 hidden "
+        className:"top-0 hidden ",
+        img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
         
     },
    

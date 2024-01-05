@@ -7,7 +7,7 @@ export function Project(){
         {
             Data.map((item)=>{
                 return(
-                    <Project1 Data={item}/>
+                    <Project1 key={item.index} Data={item}/>
                 )
             })
         }

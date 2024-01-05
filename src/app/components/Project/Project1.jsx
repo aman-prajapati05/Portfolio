@@ -1,6 +1,7 @@
 "use client"
 import { PPmori, arges } from "../../../../public/fonts/fonts";
 import { motion } from "framer-motion";
+import Lumi from "../../../../public/images/Lumi1.png";
 
 import { useState,useEffect } from "react";
 
@@ -33,6 +34,20 @@ export function Project1({Data}) {
         document.removeEventListener('mousemove', updateCursorPosition);
       };
     }, []);
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+     if(Data.img && Data.img.length > 0){
+        const intervalId = setInterval(() => { 
+              setCurrentImageIndex((prevIndex) => (prevIndex + 1) % Data.img.length);
+        }, 900);
+        return () => clearInterval(intervalId);
+     }
+
+  }, [Data.img]);
+    
+        
 
  
   return (
@@ -73,7 +88,13 @@ export function Project1({Data}) {
           </div>
           
         <div className={`${PPmori.className} order-5 md:hidden text-2xl tracking-tighter underline-offset-4 underline`}>View Site</div>
-          <div className=" md:w-[26rem] md:h-[20rem] w-[18rem] h-[18rem] bg-white overflow-hidden opacity-5 rounded-xl order-1 md:order-3"></div>
+        <div className="flex  justify-center   md:w-[26rem] md:h-[20rem] w-[18rem] h-[18rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl order-1 md:order-3">
+            
+            <img 
+            className="p-8  object-cover"
+            src={Data.img[currentImageIndex]} alt="" />
+            
+          </div>
         </div>
         <motion.div 
             initial={{ opacity: 0, y: 50 }} // Initial position and opacity
