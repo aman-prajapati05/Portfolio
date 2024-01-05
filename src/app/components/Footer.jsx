@@ -1,6 +1,46 @@
+"use client"
 import '../globals.css'
 import { PPmori, arges, bigS } from '../../../public/fonts/fonts'
+import { useEffect, useState } from 'react';
+import { motion,useAnimation } from 'framer-motion';
 export function Footer(){
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const controls = useAnimation();
+  
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
+    useEffect(() => {
+      const element = document.getElementById("project2Content");
+  
+      if (element) {
+        const elementRect = element.getBoundingClientRect();
+        const isVisible = elementRect.top <= window.innerHeight && elementRect.bottom >= 0;
+  
+        if (isVisible) {
+          controls.start({
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, staggerChildren: 0.1 },
+          });
+        } else {
+          controls.start({
+            opacity: 0,
+            y: 50,
+            transition: { duration: 0.5, staggerChildren: 0.1, staggerDirection: -1 },
+          });
+        }
+      }
+    }, [scrollPosition, controls]);
     return(
         <>
         <div className="bg-[#252C35] h-screen text-white w-screen absolute z-50 overflow-hidden ">
@@ -58,10 +98,16 @@ export function Footer(){
                 PORTFOLIO 2023
                 </div>
             </div>
-            <div className={`md:mt-[15rem] xl:mt-4 flex justify-between px-10 md:text-[22rem] text-9xl scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
+            <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            id='project2Content'
+             className={`md:mt-[15rem] xl:mt-4 flex justify-between px-10 md:text-[22rem] text-9xl scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
                 <div className='p-0 whitespace-nowrap'>AMAN </div>
                 <div className='p-0'> PRAJAPATI</div>
-            </div>
+            </motion.div>
             <div className="flex justify-between px-10 xl:mt-[-60px] mb-0 pb-0 font-light text-xs">
                 <div>
                     INFOS & CREDITS
