@@ -3,6 +3,7 @@ import '../globals.css'
 import { PPmori, arges, bigS } from '../../../public/fonts/fonts'
 import { useEffect, useState } from 'react';
 import { motion,useAnimation } from 'framer-motion';
+import BackToTopButton from './BTP';
 export function Footer(){
     const [scrollPosition, setScrollPosition] = useState(0);
     const controls = useAnimation();
@@ -112,8 +113,8 @@ export function Footer(){
                 <div>
                     INFOS & CREDITS
                 </div>
-                <div>
-                    BACK TO TOP
+                <div className=' cursor-pointer'>
+                    <BackToTopButton/>
                 </div>
             </div>
             </div>
