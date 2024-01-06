@@ -1,9 +1,7 @@
 "use client"
 import { PPmori, arges } from "../../../../public/fonts/fonts";
-import { motion } from "framer-motion";
-import Lumi from "../../../../public/images/Lumi1.png";
-
-import { useState,useEffect } from "react";
+import { motion,useAnimation } from "framer-motion";
+import { useState,useEffect,useRef } from "react";
 
 
 export function Project1({Data}) {
@@ -35,6 +33,18 @@ export function Project1({Data}) {
       };
     }, []);
 
+
+    const controls = useAnimation();
+    const scrollRef = useRef(null);
+  
+    useEffect(() => {
+      controls.start({ y: 0, transition: { duration: 0.9, ease: 'easeInOut' } });
+    }, [controls]);
+  
+    const handleScroll = (e) => {
+      controls.start({ y: e.target.scrollTop });
+    };
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -46,18 +56,70 @@ export function Project1({Data}) {
      }
 
   }, [Data.img]);
+
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const controls2 = useAnimation();
+
+  const handleScroll2 = () => {
+    setScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll2);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll2);
+    };
+  }, []);
+
+  let isVisible = false;
+  useEffect(() => {
+    const element = document.getElementById(`element${Data.index}`);
+
+    if (element) {
+      const elementRect = element.getBoundingClientRect();
+       isVisible = elementRect.top <= window.innerHeight/2 && elementRect.bottom/2 >= 0;
+
+      if (isVisible) {
+        controls2.start({
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.3, staggerChildren: 0.1 },
+        });
+      } else {
+        controls2.start({
+          opacity: 0,
+          y: 50,
+          transition: { duration: 0.3, staggerChildren: 0.1, staggerDirection: -1 },
+        });
+      }
+    }
+  }, [scrollPosition, controls]);
+    
+  const handleHoverAnimation = isVisible ? { opacity: 1, y: 0 } : controls2;
     
         
 
  
   return (
     <>
-      <div
+      <motion.div
+      ref={scrollRef}
+      onScroll={handleScroll}
+      animate={controls}
+      
         className={`w-full h-screen ${Data.color} text-white pt-4 px-10 ${arges.className} overflow-hidden sticky ${Data.className} z-10`}
       >
 
         
-        <div className="flex md:justify-between justify-center">
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls2}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.5 }}
+        id={`element${Data.index}`}
+         className="flex md:justify-between justify-center">
           <div className=" font-black text-3xl hidden md:block">SOME</div>
           <div className={`flex items-center ${PPmori.className}`}>
             <div>{Data.index}</div>
@@ -65,7 +127,7 @@ export function Project1({Data}) {
             <div>05</div>
           </div>
           <div className="font-black text-3xl hidden md:block">PROJECTS</div>
-        </div>
+        </motion.div>
         
         <div
           className={`${arges.className} text-[22rem] font-black opacity-20 md:flex  hidden justify-end relative top-36`}
@@ -75,7 +137,11 @@ export function Project1({Data}) {
 
         
 
-        <div
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls2}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.3 }}
           className={`flex md:justify-between md:flex-row flex-col relative md:-top-52 items-center md:items-stretch top-24 gap-8 md:gap-0 ${arges.className}`}
         >
           <div className="flex flex-col order-2 md:order-1">
@@ -95,13 +161,14 @@ export function Project1({Data}) {
             src={Data.img[currentImageIndex]} alt="" />
             
           </div>
-        </div>
+        </motion.div>
         <motion.div 
-            initial={{ opacity: 0, y: 50 }} // Initial position and opacity
-            animate={{ opacity: 1, y: 0 }} // Animation properties
+            initial={{ opacity: 0, y: 100 }} // Initial position and opacity
             exit={{ opacity: 0, y: 50 }} // Exit animation
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
             whileHover={{ scale: 1.3 }} // Scale up on hover
+            animate={handleHoverAnimation}
+            id={`element${Data.index}`}
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
           className={` ${PPmori.className} ${Data.color} cursor-default w-24 h-24 rounded-full border-2 xl:flex justify-center items-center -mt-9 text-xl hover:scale-110 hidden md:order-2 absolute`}>
             <motion.div
@@ -116,7 +183,7 @@ export function Project1({Data}) {
         </motion.div>
         <div className={`${PPmori.className}  md:flex justify-center text-3xl underline underline-offset-4 hidden xl:hidden
         `}>View Site</div>
-      </div>
+      </motion.div>
       
     </>
   );
