@@ -4,6 +4,7 @@ import { PPmori, arges, bigS } from '../../../public/fonts/fonts'
 import { useEffect, useState } from 'react';
 import { motion,useAnimation } from 'framer-motion';
 import BackToTopButton from './BTP';
+import Link from 'next/link';
 export function Footer(){
     const [scrollPosition, setScrollPosition] = useState(0);
     const controls = useAnimation();
@@ -65,8 +66,8 @@ export function Footer(){
                     <div className="flex flex-col md:px-5">
                         <div className="text-xl ">SOCIALS</div>
                         <div className="flex flex-col mt-5">
-                            <div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">LINKEDIN</div>
-                            <div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">INSTAGRAM</div>
+                            <a href="https://www.linkedin.com/in/aman-prajapati-416364289/" target='blank'><div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">LINKEDIN</div></a>
+                            <a href="https://www.instagram.com/amann.n17/" target='blank'><div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">INSTAGRAM</div></a>
                             <div className="pb-3 text-[#929598] hover:text-white cursor-pointer text-lg">TWITTER</div>
                             <div className="text-[#929598] hover:text-white cursor-pointer text-lg">SKILLS</div>
                         </div>
@@ -78,14 +79,14 @@ export function Footer(){
                     <div className="flex flex-col md:px-5">
                         <div className="text-xl ">OTHERS</div>
                         <div className="flex flex-col mt-5">
-                            <div className="pb-3 text-[#929598] cursor-pointer hover:text-white text-lg">GITHUB</div> 
+                            <a href="https://github.com/aman-prajapati05" target='blank'><div className="pb-3 text-[#929598] cursor-pointer hover:text-white text-lg">GITHUB</div> </a>
                             <div className="pb-3 text-[#929598] cursor-pointer hover:text-white text-lg">RESUME</div> 
                             
                         </div>
                     </div>
     </div>
                     <div className="underline underline-offset-8 tracking-wider text-2xl cursor-pointer">
-                        LET'S WORK TOGETHER
+                        <Link href='/Contact'>LET'S WORK TOGETHER</Link>
                     </div>
                 </div>
                 

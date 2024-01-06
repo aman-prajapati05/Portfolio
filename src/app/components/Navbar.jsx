@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { PPmori,arges } from '../../../public/fonts/fonts';
+import Link from 'next/link';
 import './../globals.css'
 
 export function Navbar() {
@@ -47,7 +48,7 @@ export function Navbar() {
                         </div>
                         <div className="flex mt-4 text-xs md:text-base md:mt-16 md:justify-between hover:text-white">
                             <div>/04</div>
-                            <div className="text-5xl font-normal mons px-2 md:text-8xl">CONTACT</div>
+                            <div className="text-5xl font-normal mons px-2 md:text-8xl"><Link href='/Contact'>CONTACT</Link></div>
                         </div>
                         </div>
                     </div>
