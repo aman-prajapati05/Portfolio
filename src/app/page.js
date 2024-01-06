@@ -25,9 +25,9 @@ export default function Home() {
 
   return (
    <>
-   <AnimatePresence>
+   {/* <AnimatePresence>
    {loading && <Preloader/>}
-   </AnimatePresence>
+   </AnimatePresence> */}
     
     <Navbar/>
    <Landing/>  
