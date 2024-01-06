@@ -10,6 +10,7 @@ import { Project1 } from './components/Project/Project1';
 import { Project } from './components/Project/Project';
 import { Navbar } from './components/Navbar';
 import { Selected } from './components/selected';
+import { Contact } from './components/Contact';
 
 export default function Home() {
 
@@ -29,12 +30,14 @@ export default function Home() {
    {loading && <Preloader/>}
    </AnimatePresence> */}
     
-    <Navbar/>
-   <Landing/>  
-   <Selected/>
-   <Project/>
+   <Contact/>
+
+    {/* <Navbar/> */}
+   {/* <Landing/>   */}
+   {/* <Selected/> */}
+   {/* <Project/> */}
    
-   <Footer/>
+   {/* <Footer/> */}
    </>
   )
 }
