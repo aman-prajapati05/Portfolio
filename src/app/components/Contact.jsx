@@ -2,6 +2,10 @@
 
 import { PPmori } from "../../../public/fonts/fonts"
 import toast,{Toaster} from "react-hot-toast";
+import { RxCrossCircled } from "react-icons/rx";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import '../globals.css'
 
 
 
@@ -36,11 +40,16 @@ import toast,{Toaster} from "react-hot-toast";
 
     return (
         <>
-        <div className="w-screen h-screen md:p-10 p-5">
+        <motion.div 
+        initial={{ opacity: 0, y: '-100vh' }} 
+        animate={{ opacity: 1, y: 0 }} 
+        exit={{ opacity: 0, y: '-100vh' }} 
+        transition={{ duration: 0.5, ease: 'easeIn' }}
+        className="w-screen h-screen md:p-10 p-5">
             <Toaster/>
             <div className="bg-[#252C35] w-full h-full rounded-3xl ">
-                <div className="flex  justify-between md:justify-end text-white px-8 pt-8">
-                    A
+                <div className="flex justify-center md:justify-end text-white  px-8 pt-8">
+                <Link href='/'><RxCrossCircled size={45} className="rotate-on-hover" /></Link>
                     </div>
                 <div className={`${PPmori.className} flex text-white justify-center md:pt-5 pt-28 md:text-4xl text-3xl px-4 font-medium`}>
                         Fill the form and i’ll get back to you (very) quickly
@@ -57,7 +66,7 @@ import toast,{Toaster} from "react-hot-toast";
                 </div>
 
             </div>
-        </div>
+        </motion.div>
         </>
     )
 }
