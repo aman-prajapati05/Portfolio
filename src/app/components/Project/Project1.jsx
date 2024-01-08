@@ -6,12 +6,16 @@ import { useState,useEffect,useRef } from "react";
 
 export function Project1({Data}) {
 
-  const [position, setPosition] = useState({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+  const [position, setPosition] = useState({
+    x: typeof window !== 'undefined' ? window.innerWidth / 2 : 0,
+    y: typeof window !== 'undefined' ? window.innerHeight / 2 : 0,
+  });
+
     const borderOffset = 50;
     const minX = borderOffset;
     const minY = borderOffset;
-    const maxX = window.innerWidth - borderOffset;
-    const maxY = window.innerHeight - borderOffset;
+    const maxX = typeof window !== 'undefined' ? window.innerWidth - borderOffset : 0;
+    const maxY = typeof window !== 'undefined' ? window.innerHeight - borderOffset : 0;
     const updateCursorPosition = (event) => {
       const { clientX: x, clientY: y } = event;
   
