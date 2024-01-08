@@ -9,7 +9,7 @@ import { AnimatePresence } from 'framer-motion';
 import { Project1 } from './components/Project/Project1';
 import { Project } from './components/Project/Project';
 import { Navbar } from './components/Navbar';
-import { Selected } from './components/selected';
+import { Selected } from './components/Selected';
 import { Contact } from './components/Contact';
 
 export default function Home() {
