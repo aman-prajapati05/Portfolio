@@ -1,5 +1,5 @@
 "use client"
-import { PPmori, arges } from "../../../../public/fonts/fonts";
+import { PPmori, arges } from "../../../public/fonts/fonts";
 import { motion,useAnimation } from "framer-motion";
 import { useState,useEffect,useRef } from "react";
 

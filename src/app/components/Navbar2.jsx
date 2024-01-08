@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { PPmori } from '../../../public/fonts/fonts';
+import { PPmori } from '../../public/fonts/fonts';
 
 export function Navbar2() {
 
