@@ -5,6 +5,7 @@ export const Data = [
         title: "LUMI",
         description: "Ai powered story telling app",
         className: "top-0",
+        link:"https://lumiai.vercel.app/",
         img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
     },
 

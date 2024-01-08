@@ -158,7 +158,7 @@ export function Project1({Data}) {
             <div className="md:text-[22rem] text-9xl font-black leading-none md:order-2 order-1 text-center  ">{Data.title}</div>
           </div>
           
-        <div className={`${PPmori.className} order-5 md:hidden text-2xl tracking-tighter underline-offset-4 underline`}>View Site</div>
+        <div className={`${PPmori.className} order-5 md:hidden text-2xl tracking-tighter underline-offset-4 underline`}><a href={Data.link} target="blank">View Site</a></div>
         <div className="flex  justify-center   md:w-[26rem] md:h-[20rem] w-[18rem] h-[18rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl order-1 md:order-3">
             
             <img 
@@ -167,7 +167,7 @@ export function Project1({Data}) {
             
           </div>
         </motion.div>
-        <motion.div 
+        <a href={Data.link} target="blank"><motion.div 
             initial={{ opacity: 0, y: 100 }} // Initial position and opacity
             exit={{ opacity: 0, y: 50 }} // Exit animation
             transition={{ duration: 0.3 }}
@@ -185,9 +185,9 @@ export function Project1({Data}) {
             >
             OPEN
             </motion.div>
-        </motion.div>
-        <div className={`${PPmori.className}  md:flex justify-center text-3xl underline underline-offset-4 hidden xl:hidden
-        `}>View Site</div>
+        </motion.div></a>
+        <a href={Data.link} target="blank"><div className={`${PPmori.className}  md:flex justify-center text-3xl underline underline-offset-4 hidden xl:hidden
+        `}>View Site</div></a>
       </motion.div>
       
     </>
