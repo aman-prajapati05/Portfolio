@@ -1,4 +1,4 @@
-import { arges } from "../../public/fonts/fonts";
+import { arges } from "../../../public/fonts/fonts"
 
 export function Selected(){
     return(

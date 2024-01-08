@@ -1,5 +1,6 @@
 "use client"
-import { PPmori, arges } from "../../../public/fonts/fonts";
+import { data } from "autoprefixer";
+import { PPmori,arges } from "../../../../public/fonts/fonts";
 import { motion,useAnimation } from "framer-motion";
 import { useState,useEffect,useRef } from "react";
 
@@ -162,7 +163,7 @@ export function Project1({Data}) {
             
             <img 
             className="p-8  object-cover"
-            src={Data.img[currentImageIndex]} alt="" />
+          src={Data.img[currentImageIndex]} alt="" />
             
           </div>
         </motion.div>

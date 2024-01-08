@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { PPmori,arges } from '../../public/fonts/fonts';
+import { PPmori,arges } from '../../../public/fonts/fonts';
 import { motion,useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import './../globals.css'

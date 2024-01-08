@@ -1,6 +1,6 @@
 "use client"
 
-import { PPmori } from "../../public/fonts/fonts"
+import { PPmori } from "../../../public/fonts/fonts";
 import toast,{Toaster} from "react-hot-toast";
 import { RxCrossCircled } from "react-icons/rx";
 import { motion } from "framer-motion";

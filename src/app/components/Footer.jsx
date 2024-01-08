@@ -1,6 +1,6 @@
 "use client"
 import '../globals.css'
-import { PPmori, arges, bigS } from '../../public/fonts/fonts'
+import { PPmori,arges } from '../../../public/fonts/fonts';
 import { useEffect, useState } from 'react';
 import { motion,useAnimation } from 'framer-motion';
 import BackToTopButton from './BTP';
