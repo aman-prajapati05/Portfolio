@@ -86,7 +86,7 @@ export function Footer(){
                     </div>
     </div>
                     <div className="underline underline-offset-8 tracking-wider text-2xl cursor-pointer">
-                        <Link href='/Contact'>LET'S WORK TOGETHER</Link>
+                        <Link href='/Contact'>LET&rsquo;S WORK TOGETHER</Link>
                     </div>
                 </div>
                 

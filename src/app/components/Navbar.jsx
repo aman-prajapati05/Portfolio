@@ -36,7 +36,7 @@ export function Navbar() {
                 transition={{ duration: 0.5, ease: 'easeIn' }}
                 className='sticky top-4 -mt-28 ' >
                <div className='w-screen flex h-screen '>
-                    <div className={`${arges.className} bg-white w-1/2 text-[#929598] tracking-wider z-50 hidden md:block`}>Hope you're having a great day ;)</div>
+                    <div className={`${arges.className} bg-white w-1/2 text-[#929598] tracking-wider z-50 hidden md:block`}>Hope you&apos;re having a great day ;)</div>
                     <div className={`${arges.className} text-[#A0A3A6] md:w-1/2 w-full h-full  bg-[#252C35] tracking-wider z-50`}>
                         <div className='hidden md:block'>Aman Prajapati</div>
                         <div className={`${PPmori.className} px-8 mt-36 md:mt-0 md:gap-0 gap-8 flex flex-col`}>
