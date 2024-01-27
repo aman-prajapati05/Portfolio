@@ -37,7 +37,7 @@ export default function Home() {
    <Selected/>
    <Project/>
    
-   {/* <Footer/> */}
+   <Footer/>
    </>
   )
 }

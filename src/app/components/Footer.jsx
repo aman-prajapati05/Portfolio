@@ -3,8 +3,9 @@ import '../globals.css'
 import { PPmori,arges } from '../../../public/fonts/fonts';
 import { useEffect, useState } from 'react';
 import { motion,useAnimation } from 'framer-motion';
-import BackToTopButton from './BTP';
+
 import Link from 'next/link';
+import BackToTopButton from './BTP';
 export function Footer(){
     const [scrollPosition, setScrollPosition] = useState(0);
     const controls = useAnimation();
@@ -45,7 +46,7 @@ export function Footer(){
     }, [scrollPosition, controls]);
     return(
         <>
-        <div className="bg-[#252C35] h-screen text-white w-screen absolute z-50 overflow-hidden ">
+        <div className="bg-[#252C35] h-screen text-white w-full absolute z-50 overflow-hidden flex flex-col justify-between">
             <div className="flex p-10 z-100">
                 <div className={`flex justify-between w-full flex-wrap ${PPmori.className} gap-7 md:gap-0`}>
                     <div className="flex ">
@@ -91,7 +92,7 @@ export function Footer(){
                 </div>
                 
             </div>
-            <div className=" mt-18 pt-20 mb-0 pb-0 ">
+            {/* <div className=" mt-18 pt-20 mb-0 pb-0 ">
             <div className="flex justify-between px-10 text-[#929598] text-xs">
                 <div className='hidden xl:block'>
                 WEB DEVELOPER
@@ -116,6 +117,29 @@ export function Footer(){
                 </div>
                 <div className=' cursor-pointer'>
                     <BackToTopButton/>
+                </div>
+            </div>
+            </div> */}
+            <div className="flex flex-col mb-8  ">
+            <div className="flex justify-between mb-3 px-10 text-[#929598] text-xs">
+                <div className='hidden lg:block'>
+                WEB DEVELOPER
+                </div>
+                <div className='hidden lg:block'>
+                PORTFOLIO 2023
+                </div>
+            </div>
+            <div
+             className={`flex justify-between px-10 text-8xl md:text-[15rem] xxl:text-[22rem] scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
+                <div className='p-0 whitespace-nowrap'>AMAN </div>
+                <div className='p-0'> PRAJAPATI</div>
+            </div>
+            <div className="flex justify-between px-10 xxl:mt-[-60px] mb-0 pb-0 font-light text-xs">
+                <div>
+                    INFOS & CREDITS
+                </div>
+                <div className=' cursor-pointer z-30'>
+                  <BackToTopButton/>
                 </div>
             </div>
             </div>
