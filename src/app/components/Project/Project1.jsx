@@ -135,19 +135,15 @@ export function Project1({Data}) {
         </motion.div>
         
         <div
-          className={`${arges.className} text-[22rem] font-black opacity-20 md:flex  hidden justify-end relative top-36`}
+          className={`${arges.className} text-[22rem] font-black opacity-20 lg:flex  hidden justify-end relative lg:top-10 `}
         >
          {Data.index}
         </div>
 
         
 
-        <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={controls2}
-        exit={{ opacity: 0, y: 50 }}
-        transition={{ duration: 0.3 }}
-          className={`flex md:justify-between md:flex-row flex-col relative md:-top-52 items-center md:items-stretch top-24 gap-8 md:gap-0 ${arges.className}`}
+        {/* <div
+          className={`flex md:justify-between md:flex-row flex-col relative  items-center md:items-stretch  gap-8 md:gap-0 ${arges.className}`}
         >
           <div className="flex flex-col order-2 md:order-1">
             <div
@@ -155,18 +151,32 @@ export function Project1({Data}) {
             >
               {Data.description}
             </div>
-            <div className="md:text-[22rem] text-9xl font-black leading-none md:order-2 order-1 text-center  ">{Data.title}</div>
+            <div className="md:text-[18rem] text-9xl font-black leading-none md:order-2 order-1 text-center  ">{Data.title}</div>
           </div>
           
         <div className={`${PPmori.className} order-5 md:hidden text-2xl tracking-tighter underline-offset-4 underline`}><a href={Data.link} target="blank">View Site</a></div>
-        <div className="flex  justify-center   md:w-[26rem] md:h-[20rem] w-[18rem] h-[18rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl order-1 md:order-3">
+        <div className="flex  justify-center   md:w-[24rem] md:h-[18rem] w-[18rem] h-[18rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl order-1 md:order-3">
             
             <img 
             className="p-8  object-cover"
           src={Data.img[currentImageIndex]} alt="" />
             
           </div>
-        </motion.div>
+        </div> */}
+
+        <div className={`flex flex-col lg:flex-row justify-center lg:justify-between w-full items-center lg:items-stretch  h-screen lg:relative lg:bottom-[18rem] xl:bottom-[15rem] xxl:bottom-[10rem]`}>
+          <div className={`flex justify-center w-[18rem] h-[18rem] md:w-[26rem] md:h-[22rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl -mt-10 mb-4 lg:order-2`}>
+          <img 
+            className="p-8  object-cover"
+            src={Data.img[currentImageIndex]} alt="" />
+          </div>
+          <div className={`lg:flex lg:flex-col lg:items-start`}>
+          <div className={` text-9xl font-black leading-none text-center lg:order-1 md:text-[14rem] lg:text-[20rem]`}>{Data.title}</div>
+          <div className={`${PPmori.className} text-center text-base md:text-lg  opacity-90 tracking-wider mb-4`}>{Data.description}</div>
+          </div>
+          <div className={`${PPmori.className} text-2xl lg:hidden tracking-tighter underline-offset-4 underline `}><a href={Data.link} target="blank">View Site</a></div>
+        </div>
+
         <a href={Data.link} target="blank"><motion.div 
             initial={{ opacity: 0, y: 100 }} // Initial position and opacity
             exit={{ opacity: 0, y: 50 }} // Exit animation
@@ -175,7 +185,7 @@ export function Project1({Data}) {
             animate={handleHoverAnimation}
             id={`element${Data.index}`}
           style={{ left: `${position.x}px`, top: `${position.y}px` }}
-          className={` ${PPmori.className} ${Data.color} cursor-default w-24 h-24 rounded-full border-2 xl:flex justify-center items-center -mt-9 text-xl hover:scale-110 hidden md:order-2 absolute`}>
+          className={` ${PPmori.className} ${Data.color} cursor-default w-24 h-24 rounded-full border-2 lg:flex justify-center items-center -mt-9 text-xl hover:scale-110 hidden md:order-2 absolute`}>
             <motion.div
              initial={{ opacity: 0, y: 50, rotateX: 0 }} // Initial position and opacity
              animate={{ opacity: 1, y: 0 }} // Animation properties
@@ -186,8 +196,7 @@ export function Project1({Data}) {
             OPEN
             </motion.div>
         </motion.div></a>
-        <a href={Data.link} target="blank"><div className={`${PPmori.className}  md:flex justify-center text-3xl underline underline-offset-4 hidden xl:hidden
-        `}>View Site</div></a>
+   
       </motion.div>
       
     </>

@@ -3,7 +3,7 @@ export const Data = [
         index: '01',
         color:"bg-[#252525]",
         title: "LUMI",
-        description: "Ai powered story telling app",
+        description: "AI powered story telling app",
         className: "top-0",
         link:"https://lumiai.vercel.app/",
         img:["/images/Lumi1.png","/images/Lumi2.png","/images/Lumi3.png","/images/Lumi4.png"]
@@ -12,7 +12,7 @@ export const Data = [
     {
         index: '02',
         color:"bg-[#327EF6]",
-        title: "NIRMAAN",
+        title: "NRMN",
         description: "College Club Website",
         className:"top-0",
         img:["/images/N1.png","/images/N2.png","/images/N3.png","/images/N4.png"],
