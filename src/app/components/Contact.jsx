@@ -56,9 +56,9 @@ import '../globals.css'
                 </div>
                 <div>
                     <form action="submit" onSubmit={handleSubmit} className={` ${PPmori.className} md:px-40 px-4 md:py-28 py-16 w-full`}>
-                        <div className="flex justify-between flex-col md:flex-row">
+                        <div className="flex justify-between flex-col lg:flex-row">
                         <input type="text" id="name"  placeholder="Name" required className="text-white w-[1/2] p-3 h-16 bg-transparent border-b md:text-4xl text-2xl border-white outline-none focus:border-white" />
-                        <input type="text" id="email"  placeholder="Email" required className="text-white w-[1/2] p-3 h-16 bg-transparent border-b md:text-4xl text-2xl border-white outline-none focus:border-white" />
+                        <input type="text" id="email"  placeholder="Email" required className=" text-white w-[1/2] p-3 h-16 bg-transparent border-b md:text-4xl text-2xl border-white outline-none focus:border-white" />
                         </div>
                         <textarea name="message" id="message"  cols="30" rows="10" required placeholder="Message" className="text-white w-full h-36 md:text-4xl text-2xl pt-8 px-3 bg-transparent border-b border-white outline-none focus:border-white"></textarea>
                         <input type="submit" value="Send" className="text-white text-center mt-9 md:mt-20 md:text-4xl  w-full  bg-transparent underline underline-offset-[8px] cursor-pointer text-2xl border-white outline-none focus:border-white"/>
