@@ -92,34 +92,6 @@ export function Footer(){
                 </div>
                 
             </div>
-            {/* <div className=" mt-18 pt-20 mb-0 pb-0 ">
-            <div className="flex justify-between px-10 text-[#929598] text-xs">
-                <div className='hidden xl:block'>
-                WEB DEVELOPER
-                </div>
-                <div className='hidden xl:block'>
-                PORTFOLIO 2023
-                </div>
-            </div>
-            <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={controls}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
-            id='project2Content'
-             className={`md:mt-[15rem] xl:mt-4 flex justify-between px-10 md:text-[22rem] text-9xl scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
-                <div className='p-0 whitespace-nowrap'>AMAN </div>
-                <div className='p-0'> PRAJAPATI</div>
-            </motion.div>
-            <div className="flex justify-between px-10 xl:mt-[-60px] mb-0 pb-0 font-light text-xs">
-                <div>
-                    INFOS & CREDITS
-                </div>
-                <div className=' cursor-pointer'>
-                    <BackToTopButton/>
-                </div>
-            </div>
-            </div> */}
             <div className="flex flex-col mb-8  ">
             <div className="flex justify-between mb-3 px-10 text-[#929598] text-xs">
                 <div className='hidden lg:block'>
@@ -129,11 +101,16 @@ export function Footer(){
                 PORTFOLIO 2023
                 </div>
             </div>
-            <div
+            <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            id='project2Content'
              className={`flex justify-between px-10 text-8xl md:text-[15rem] xxl:text-[22rem] scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
                 <div className='p-0 whitespace-nowrap'>AMAN </div>
                 <div className='p-0'> PRAJAPATI</div>
-            </div>
+            </motion.div>
             <div className="flex justify-between px-10 xxl:mt-[-60px] mb-0 pb-0 font-light text-xs">
                 <div>
                     INFOS & CREDITS
