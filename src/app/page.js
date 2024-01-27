@@ -34,7 +34,7 @@ export default function Home() {
 
     <Navbar/> 
    <Landing/> 
-   {/* <Selected/> */}
+   <Selected/>
    <Project/>
    
    {/* <Footer/> */}
