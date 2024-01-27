@@ -26,18 +26,18 @@ export default function Home() {
 
   return (
    <>
-   <AnimatePresence>
+   {/* <AnimatePresence>
    {loading && <Preloader/>}
-   </AnimatePresence>
+   </AnimatePresence> */}
     
    {/* <Contact/> */}
 
     <Navbar/> 
    <Landing/> 
-   <Selected/>
+   {/* <Selected/> */}
    <Project/>
    
-   <Footer/>
+   {/* <Footer/> */}
    </>
   )
 }
