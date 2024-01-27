@@ -164,7 +164,12 @@ export function Project1({Data}) {
           </div>
         </div> */}
 
-        <div className={`flex flex-col lg:flex-row justify-center lg:justify-between w-full items-center lg:items-stretch  h-screen lg:relative lg:bottom-[18rem] xl:bottom-[15rem] xxl:bottom-[10rem]`}>
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls2}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.3 }}
+        className={`flex flex-col lg:flex-row justify-center lg:justify-between w-full items-center lg:items-stretch  h-screen lg:relative lg:bottom-[18rem] xl:bottom-[15rem] xxl:bottom-[10rem]`}>
           <div className={`flex justify-center w-[18rem] h-[18rem] md:w-[26rem] md:h-[22rem] bg-opacity-5 bg-white overflow-hidden  rounded-xl -mt-10 mb-4 lg:order-2`}>
           <img 
             className="p-8  object-cover"
@@ -175,7 +180,7 @@ export function Project1({Data}) {
           <div className={`${PPmori.className} text-center text-base md:text-lg  opacity-90 tracking-wider mb-4`}>{Data.description}</div>
           </div>
           <div className={`${PPmori.className} text-2xl lg:hidden tracking-tighter underline-offset-4 underline `}><a href={Data.link} target="blank">View Site</a></div>
-        </div>
+        </motion.div>
 
         <a href={Data.link} target="blank"><motion.div 
             initial={{ opacity: 0, y: 100 }} // Initial position and opacity
