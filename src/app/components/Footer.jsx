@@ -107,7 +107,7 @@ export function Footer(){
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
             id='project2Content'
-             className={`flex justify-between px-10 text-8xl md:text-[15rem] xxl:text-[22rem] scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
+             className={`flex justify-between px-10 text-9xl md:text-[15rem] xxl:text-[22rem] scale-y-110 font-black flex-wrap overflow-hidden overflow-y-hidden leading-none  ${arges.className}`}>
                 <div className='p-0 whitespace-nowrap'>AMAN </div>
                 <div className='p-0'> PRAJAPATI</div>
             </motion.div>
